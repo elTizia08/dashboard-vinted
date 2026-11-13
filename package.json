@@ -1,0 +1,22 @@
+{
+  "name": "dashboard-vinted-local",
+  "version": "1.0.0",
+  "description": "Dashboard Vinted 100% local, lecture seule",
+  "author": "moi",
+  "main": "main.js",
+  "scripts": { "start": "electron ." },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "local.dashboard.vinted",
+    "productName": "Dashboard Vinted",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload.js", "index.html", "app.js", "package.json"],
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "artifactName": "Dashboard-Vinted.${ext}"
+    }
+  }
+}
